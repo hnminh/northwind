@@ -15,9 +15,9 @@ public class ProductsController {
 	@Autowired
 	private ProductsRepository repository;
 
-	// returning all Productss
-	@RequestMapping("/Productss")
-	public Iterable<Products> productss() {
+	// returning all Products
+	@RequestMapping("/AllProducts")
+	public Iterable<Products> allProducts() {
 		return repository.findAll();
 	}
 

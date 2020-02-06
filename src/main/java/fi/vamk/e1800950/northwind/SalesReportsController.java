@@ -15,9 +15,9 @@ public class SalesReportsController {
 	@Autowired
 	private SalesReportsRepository repository;
 
-	// returning all SalesReportss
-	@RequestMapping("/SalesReportss")
-	public Iterable<SalesReports> salesreportss() {
+	// returning all SalesReports
+	@RequestMapping("/AllSalesReports")
+	public Iterable<SalesReports> allSalesReports() {
 		return repository.findAll();
 	}
 

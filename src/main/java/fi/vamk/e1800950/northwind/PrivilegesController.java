@@ -15,9 +15,9 @@ public class PrivilegesController {
 	@Autowired
 	private PrivilegesRepository repository;
 
-	// returning all Privilegess
-	@RequestMapping("/Privilegess")
-	public Iterable<Privileges> privilegess() {
+	// returning all Privileges
+	@RequestMapping("/AllPrivileges")
+	public Iterable<Privileges> allPrivileges() {
 		return repository.findAll();
 	}
 

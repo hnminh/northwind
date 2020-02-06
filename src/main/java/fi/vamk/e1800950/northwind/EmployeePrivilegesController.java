@@ -15,9 +15,9 @@ public class EmployeePrivilegesController {
 	@Autowired
 	private EmployeePrivilegesRepository repository;
 
-	// returning all EmployeePrivilegess
-	@RequestMapping("/EmployeePrivilegess")
-	public Iterable<EmployeePrivileges> employeeprivilegess() {
+	// returning all EmployeePrivileges
+	@RequestMapping("/AllEmployeePrivileges")
+	public Iterable<EmployeePrivileges> allEmployeePrivileges() {
 		return repository.findAll();
 	}
 

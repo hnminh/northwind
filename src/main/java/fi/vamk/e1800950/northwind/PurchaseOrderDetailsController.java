@@ -15,9 +15,9 @@ public class PurchaseOrderDetailsController {
 	@Autowired
 	private PurchaseOrderDetailsRepository repository;
 
-	// returning all PurchaseOrderDetailss
-	@RequestMapping("/PurchaseOrderDetailss")
-	public Iterable<PurchaseOrderDetails> purchaseorderdetailss() {
+	// returning all PurchaseOrderDetails
+	@RequestMapping("/AllPurchaseOrderDetails")
+	public Iterable<PurchaseOrderDetails> allPurchaseOrderDetails() {
 		return repository.findAll();
 	}
 

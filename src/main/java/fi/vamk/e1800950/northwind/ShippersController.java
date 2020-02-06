@@ -15,9 +15,9 @@ public class ShippersController {
 	@Autowired
 	private ShippersRepository repository;
 
-	// returning all Shipperss
-	@RequestMapping("/Shipperss")
-	public Iterable<Shippers> shipperss() {
+	// returning all Shippers
+	@RequestMapping("/AllShippers")
+	public Iterable<Shippers> allShippers() {
 		return repository.findAll();
 	}
 

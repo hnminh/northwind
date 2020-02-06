@@ -15,9 +15,9 @@ public class InventoryTransactionTypesController {
 	@Autowired
 	private InventoryTransactionTypesRepository repository;
 
-	// returning all InventoryTransactionTypess
-	@RequestMapping("/InventoryTransactionTypess")
-	public Iterable<InventoryTransactionTypes> inventorytransactiontypess() {
+	// returning all InventoryTransactionTypes
+	@RequestMapping("/AllInventoryTransactionTypes")
+	public Iterable<InventoryTransactionTypes> allInventoryTransactionTypes() {
 		return repository.findAll();
 	}
 

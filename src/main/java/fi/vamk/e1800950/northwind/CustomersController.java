@@ -15,9 +15,9 @@ public class CustomersController {
 	@Autowired
 	private CustomersRepository repository;
 
-	// returning all Customerss
-	@RequestMapping("/Customerss")
-	public Iterable<Customers> customerss() {
+	// returning all Customers
+	@RequestMapping("/AllCustomers")
+	public Iterable<Customers> allCustomers() {
 		return repository.findAll();
 	}
 

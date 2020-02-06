@@ -7,7 +7,7 @@ public class CreateRepositoryAndController {
 	private static File folder = new File("/Users/minhhoang/Downloads/northwind/src/main/java/fi/vamk/e1800950/northwind");
 
 	public static void main(String[] args) {
-		System.out.println("Reading files under the folder " + folder.getAbsolutePath());
+		// System.out.println("Reading files under the folder " + folder.getAbsolutePath());
 		listFilesForFolder(folder);
 	}
 
@@ -20,13 +20,14 @@ public class CreateRepositoryAndController {
 					String fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1, fileName.length()).toLowerCase();
 					
 					if (fileExtension.equals("java")) {
+						// System.out.println(fileName);
 
 						// extract just the name part of the file
 						String temp = fileName.substring(0, fileName.lastIndexOf('.'));
 
 						// create repository & controller file if does not exist
 						if (!temp.equals("CreateRepositoryAndController") && !temp.equals("NorthwindApplication") 
-							&& !temp.contains("Repository") && !temp.contains("Controller")) {
+							&& !temp.equals("SpringFoxConfig") && !temp.contains("Repository") && !temp.contains("Controller")) {
 								createRepositoryFile(temp);
 								createControllerFile(temp);
 						}
@@ -72,9 +73,9 @@ public class CreateRepositoryAndController {
 			content.write("\t@Autowired\n");
 			content.write("\tprivate " + fileName + "Repository repository;\n\n");
 
-			content.write("\t// returning all " + fileName + "s\n");
-			content.write("\t@RequestMapping(\"/" + fileName + "s\")\n");
-			content.write("\tpublic Iterable<" + fileName + "> " + fileName.toLowerCase() + "s() {\n");
+			content.write("\t// returning all " + fileName + "\n");
+			content.write("\t@RequestMapping(\"/All" + fileName + "\")\n");
+			content.write("\tpublic Iterable<" + fileName + "> all" + fileName + "() {\n");
 			content.write("\t\treturn repository.findAll();\n\t}\n\n");
 
 			content.write("\t// returning one " + fileName + " only\n");

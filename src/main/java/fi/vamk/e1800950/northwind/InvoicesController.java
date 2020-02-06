@@ -15,9 +15,9 @@ public class InvoicesController {
 	@Autowired
 	private InvoicesRepository repository;
 
-	// returning all Invoicess
-	@RequestMapping("/Invoicess")
-	public Iterable<Invoices> invoicess() {
+	// returning all Invoices
+	@RequestMapping("/AllInvoices")
+	public Iterable<Invoices> allInvoices() {
 		return repository.findAll();
 	}
 

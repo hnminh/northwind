@@ -15,9 +15,9 @@ public class OrdersStatusController {
 	@Autowired
 	private OrdersStatusRepository repository;
 
-	// returning all OrdersStatuss
-	@RequestMapping("/OrdersStatuss")
-	public Iterable<OrdersStatus> ordersstatuss() {
+	// returning all OrdersStatus
+	@RequestMapping("/AllOrdersStatus")
+	public Iterable<OrdersStatus> allOrdersStatus() {
 		return repository.findAll();
 	}
 

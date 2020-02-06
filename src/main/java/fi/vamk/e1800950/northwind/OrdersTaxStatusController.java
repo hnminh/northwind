@@ -15,9 +15,9 @@ public class OrdersTaxStatusController {
 	@Autowired
 	private OrdersTaxStatusRepository repository;
 
-	// returning all OrdersTaxStatuss
-	@RequestMapping("/OrdersTaxStatuss")
-	public Iterable<OrdersTaxStatus> orderstaxstatuss() {
+	// returning all OrdersTaxStatus
+	@RequestMapping("/AllOrdersTaxStatus")
+	public Iterable<OrdersTaxStatus> allOrdersTaxStatus() {
 		return repository.findAll();
 	}
 

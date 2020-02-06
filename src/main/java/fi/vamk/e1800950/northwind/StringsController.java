@@ -15,9 +15,9 @@ public class StringsController {
 	@Autowired
 	private StringsRepository repository;
 
-	// returning all Stringss
-	@RequestMapping("/Stringss")
-	public Iterable<Strings> stringss() {
+	// returning all Strings
+	@RequestMapping("/AllStrings")
+	public Iterable<Strings> allStrings() {
 		return repository.findAll();
 	}
 

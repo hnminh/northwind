@@ -15,9 +15,9 @@ public class OrderDetailsController {
 	@Autowired
 	private OrderDetailsRepository repository;
 
-	// returning all OrderDetailss
-	@RequestMapping("/OrderDetailss")
-	public Iterable<OrderDetails> orderdetailss() {
+	// returning all OrderDetails
+	@RequestMapping("/AllOrderDetails")
+	public Iterable<OrderDetails> allOrderDetails() {
 		return repository.findAll();
 	}
 
