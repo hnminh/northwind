@@ -10,18 +10,18 @@ This is a project using RESTful to manage the Microsoft's well known Northwind d
 
 ## Usage
 
-Since the project use Maven and Lombok-wired JPA, we can easilly generate entities by running command
+Since the project uses Maven and Lombok-wired JPA, we can easilly generate entities by running command
 
 ```bash
 mvn jpa-entity-generator:generateAll
 ```
 
-I also created a file names ```CreateRepositoryAndController.java```, it can auto-create all the Repository and Controller files for each entity. Just run it after getting all the entity files.
+I also created a file names ```CreateRepositoryAndController.java```, which can auto-create all the Repository and Controller files for each entity. Just run it after getting all the entity files.
 
-The server can easily requested by accessing to the page
-```
+We can easily send requests to the server by any REST client, or by accessing to the page
+```https
 https://localhost:8443/swagger-ui.html#/
 ```
 This page use the Swagger UI, and through this we can easily CRUD the database.
 
-Since this is a school project, so I need to login to my VAMK's account if required.
+Since this is a school project, I need to use my VAMK's account to login for LDAP authentication if required.
